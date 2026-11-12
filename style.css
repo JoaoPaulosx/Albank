@@ -15,38 +15,10 @@ body {
   background: #e0e5ec;
 }
 
-/* Container com perspectiva 3D */
-.card-wrapper {
+/* Container arredondado externo com efeito neumórfico */
+.login-container {
   width: 380px;
-  height: 500px;
-  perspective: 1000px;
-}
-
-/* Elemento que gira */
-.card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transition: transform 0.8s cubic-bezier(0.4, 0.2, 0.2, 1);
-  transform-style: preserve-3d;
-}
-
-/* Classe ativada pelo JavaScript para girar 180 graus */
-.card-inner.is-flipped {
-  transform: rotateY(180deg);
-}
-
-/* Estilo comum da frente e do verso */
-.card-face {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 40px 35px;
+  padding: 50px 35px;
   border-radius: 50px;
   background: #e0e5ec;
   box-shadow: 12px 12px 24px #b8bec7,
@@ -54,31 +26,37 @@ body {
   text-align: center;
 }
 
-/* O verso já começa virado 180 graus */
-.card-back {
-  transform: rotateY(180deg);
-}
-
-h1 {
+.login-container h1 {
   font-size: 28px;
   font-weight: 700;
   color: #31344b;
   margin-bottom: 5px;
 }
 
-p.subtitle {
+.login-container p.subtitle {
   font-size: 13px;
   color: #6c7587;
-  margin-bottom: 28px;
+  margin-bottom: 30px;
 }
 
+/* Campos de entrada com sombra interna (inset) */
 .input-group {
-  margin-bottom: 18px;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.input-group i {
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #6c7587;
+  font-size: 14px;
 }
 
 .input-group input {
   width: 100%;
-  padding: 14px 20px;
+  padding: 14px 18px 14px 45px;
   border: none;
   outline: none;
   border-radius: 25px;
@@ -99,13 +77,14 @@ p.subtitle {
               inset -3px -3px 6px #ffffff;
 }
 
+/* Opções: Remember me & Forgot password */
 .options {
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 12px;
   color: #6c7587;
-  margin-bottom: 24px;
+  margin-bottom: 25px;
   padding: 0 5px;
 }
 
@@ -124,13 +103,15 @@ p.subtitle {
 .options a {
   color: #6c7587;
   text-decoration: none;
+  transition: color 0.2s;
 }
 
 .options a:hover {
   color: #31344b;
 }
 
-.btn-action {
+/* Botão SIGN IN com relevo externo */
+.btn-signin {
   width: 100%;
   padding: 14px;
   border: none;
@@ -140,30 +121,37 @@ p.subtitle {
   color: #31344b;
   font-size: 14px;
   font-weight: 600;
+  letter-spacing: 1px;
   cursor: pointer;
   box-shadow: 6px 6px 12px #b8bec7,
               -6px -6px 12px #ffffff;
   transition: all 0.2s ease;
 }
 
-.btn-action:active {
+.btn-signin:hover {
+  color: #1f2233;
+}
+
+/* Efeito de clique pressionado */
+.btn-signin:active {
   box-shadow: inset 4px 4px 8px #b8bec7,
               inset -4px -4px 8px #ffffff;
 }
 
-.switch-link {
-  margin-top: 24px;
+/* Link de cadastro no rodapé */
+.signup-link {
+  margin-top: 25px;
   font-size: 12px;
   color: #6c7587;
 }
 
-.switch-link a {
+.signup-link a {
   color: #d9534f;
   font-weight: 600;
   text-decoration: none;
   margin-left: 4px;
 }
 
-.switch-link a:hover {
+.signup-link a:hover {
   text-decoration: underline;
 }

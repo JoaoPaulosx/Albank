@@ -15,17 +15,15 @@ body {
   background: #e0e5ec;
 }
 
-/* --- INÍCIO DA SUBSTITUIÇÃO (Substitui o antigo .login-container) --- */
-
-/* Aumenta a profundidade da perspectiva */
-.card-wrapper {
+/* Mantém o tamanho exato do popup centralizado com profundidade 3D */
+.popup-wrapper {
   width: 380px;
-  height: 520px;
+  height: 510px;
   perspective: 1500px;
 }
 
-/* Deixa a curva de velocidade mais marcante */
-.card-inner {
+/* Container que gira 180 graus mantendo o formato de popup único */
+.popup-card {
   position: relative;
   width: 100%;
   height: 100%;
@@ -33,13 +31,12 @@ body {
   transform-style: preserve-3d;
 }
 
-/* Faz o cartão girar 180 graus */
-.card-inner.is-flipped {
+.popup-card.is-flipped {
   transform: rotateY(180deg);
 }
 
-/* Estilo neumórfico aplicado na frente e no verso */
-.card-face {
+/* Visual idêntico ao popup da sua tela */
+.popup-face {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -49,34 +46,31 @@ body {
   flex-direction: column;
   justify-content: center;
   padding: 45px 35px;
-  border-radius: 50px;
+  border-radius: 40px;
   background: #e0e5ec;
   box-shadow: 12px 12px 24px #b8bec7,
               -12px -12px 24px #ffffff;
   text-align: center;
 }
 
-/* O verso começa virado 180 graus */
-.card-back {
+.popup-back {
   transform: rotateY(180deg);
 }
 
-.card-face h1 {
+.popup-face h1 {
   font-size: 28px;
   font-weight: 700;
   color: #31344b;
   margin-bottom: 5px;
 }
 
-.card-face p.subtitle {
+.popup-face p.subtitle {
   font-size: 13px;
   color: #6c7587;
   margin-bottom: 30px;
 }
 
-/* --- FIM DA SUBSTITUIÇÃO --- */
-
-/* Campos de entrada com sombra interna (inset) */
+/* Campos de entrada */
 .input-group {
   position: relative;
   margin-bottom: 20px;
@@ -114,7 +108,7 @@ body {
               inset -3px -3px 6px #ffffff;
 }
 
-/* Opções: Remember me & Forgot password */
+/* Opções inferiores */
 .options {
   display: flex;
   justify-content: space-between;
@@ -147,7 +141,7 @@ body {
   color: #31344b;
 }
 
-/* Botão Entrar / Cadastrar com relevo externo */
+/* Botão principal */
 .btn-signin {
   width: 100%;
   padding: 14px;
@@ -169,13 +163,12 @@ body {
   color: #1f2233;
 }
 
-/* Efeito de clique pressionado */
 .btn-signin:active {
   box-shadow: inset 4px 4px 8px #b8bec7,
               inset -4px -4px 8px #ffffff;
 }
 
-/* Link de cadastro / login no rodapé */
+/* Link de troca entre Login e Cadastro */
 .signup-link {
   margin-top: 25px;
   font-size: 12px;

@@ -17,23 +17,23 @@ body {
 
 /* --- INÍCIO DA SUBSTITUIÇÃO (Substitui o antigo .login-container) --- */
 
-/* Container externo com perspectiva 3D */
+/* Aumenta a profundidade da perspectiva */
 .card-wrapper {
   width: 380px;
   height: 520px;
-  perspective: 1000px;
+  perspective: 1500px;
 }
 
-/* Cartão interno que executa a rotação */
+/* Deixa a curva de velocidade mais marcante */
 .card-inner {
   position: relative;
   width: 100%;
   height: 100%;
-  transition: transform 0.8s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transition: transform 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   transform-style: preserve-3d;
 }
 
-/* Classe ativada pelo JavaScript para girar 180 graus */
+/* Faz o cartão girar 180 graus */
 .card-inner.is-flipped {
   transform: rotateY(180deg);
 }

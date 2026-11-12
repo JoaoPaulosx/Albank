@@ -15,72 +15,31 @@ body {
   background: #e0e5ec;
 }
 
-/* Container externo com perspectiva 3D (aceita os dois nomes) */
-.card-wrapper,
-.popup-wrapper {
+/* Container arredondado externo com efeito neumórfico */
+.login-container {
   width: 380px;
-  height: 510px;
-  perspective: 1500px;
-}
-
-/* Cartão interno que gira 180 graus */
-.card-inner,
-.popup-card {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transition: transform 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  transform-style: preserve-3d;
-}
-
-.card-inner.is-flipped,
-.popup-card.is-flipped {
-  transform: rotateY(180deg);
-}
-
-/* Caixa arredondada do popup (frente e verso) */
-.card-face,
-.popup-face {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 45px 35px;
-  border-radius: 40px;
+  padding: 50px 35px;
+  border-radius: 50px;
   background: #e0e5ec;
   box-shadow: 12px 12px 24px #b8bec7,
               -12px -12px 24px #ffffff;
   text-align: center;
 }
 
-/* Verso virado 180 graus */
-.card-back,
-.popup-back {
-  transform: rotateY(180deg);
-}
-
-.card-face h1,
-.popup-face h1 {
+.login-container h1 {
   font-size: 28px;
   font-weight: 700;
   color: #31344b;
   margin-bottom: 5px;
 }
 
-.card-face p.subtitle,
-.popup-face p.subtitle {
+.login-container p.subtitle {
   font-size: 13px;
   color: #6c7587;
   margin-bottom: 30px;
 }
 
-/* Campos de entrada */
+/* Campos de entrada com sombra interna (inset) */
 .input-group {
   position: relative;
   margin-bottom: 20px;
@@ -118,7 +77,7 @@ body {
               inset -3px -3px 6px #ffffff;
 }
 
-/* Opções inferiores */
+/* Opções: Remember me & Forgot password */
 .options {
   display: flex;
   justify-content: space-between;
@@ -151,9 +110,8 @@ body {
   color: #31344b;
 }
 
-/* Botão principal */
-.btn-signin,
-.btn-action {
+/* Botão SIGN IN com relevo externo */
+.btn-signin {
   width: 100%;
   padding: 14px;
   border: none;
@@ -170,34 +128,30 @@ body {
   transition: all 0.2s ease;
 }
 
-.btn-signin:hover,
-.btn-action:hover {
+.btn-signin:hover {
   color: #1f2233;
 }
 
-.btn-signin:active,
-.btn-action:active {
+/* Efeito de clique pressionado */
+.btn-signin:active {
   box-shadow: inset 4px 4px 8px #b8bec7,
               inset -4px -4px 8px #ffffff;
 }
 
-/* Link de troca entre Login e Cadastro */
-.signup-link,
-.switch-link {
+/* Link de cadastro no rodapé */
+.signup-link {
   margin-top: 25px;
   font-size: 12px;
   color: #6c7587;
 }
 
-.signup-link a,
-.switch-link a {
+.signup-link a {
   color: #d9534f;
   font-weight: 600;
   text-decoration: none;
   margin-left: 4px;
 }
 
-.signup-link a:hover,
-.switch-link a:hover {
+.signup-link a:hover {
   text-decoration: underline;
 }

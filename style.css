@@ -39,7 +39,7 @@ body {
   margin-bottom: 30px;
 }
 
-/* Campos de entrada com sombra interna (inset) */
+/* Campo de entrada com sombra interna (inset) */
 .input-group {
   position: relative;
   margin-bottom: 20px;

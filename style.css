@@ -16,14 +16,14 @@ body {
 }
 
 /* Mantém o tamanho exato do popup centralizado com profundidade 3D */
-.popup-wrapper {
+.card-wrapper {
   width: 380px;
   height: 510px;
   perspective: 1500px;
 }
 
 /* Container que gira 180 graus mantendo o formato de popup único */
-.popup-card {
+.card-inner{
   position: relative;
   width: 100%;
   height: 100%;
@@ -36,7 +36,7 @@ body {
 }
 
 /* Visual idêntico ao popup da sua tela */
-.popup-face {
+.card-face {
   position: absolute;
   width: 100%;
   height: 100%;

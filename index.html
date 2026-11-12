@@ -1,45 +1,44 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login Neumorphism</title>
-  <link rel="stylesheet" href="style.css">
-  <!-- Ícones simples para os campos -->
+  <title>Albank</title>
+  <!-- Ícones do Font Awesome -->
   <link rel="stylesheet" href="https://cloudflare.com">
+  <!-- Link para o arquivo CSS separado -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <div class="login-card">
+  <div class="login-container">
     <h1>Login</h1>
-    <p class="subtitle">Sign in to your account</p>
+    <p class="subtitle">Entre na sua Conta</p>
 
-    <form>
+    <form action="#">
       <div class="input-group">
         <i class="fa-solid fa-user"></i>
-        <input type="text" placeholder="Username" required>
+        <input type="text" placeholder="Usuário" required>
       </div>
 
       <div class="input-group">
         <i class="fa-solid fa-lock"></i>
-        <input type="password" placeholder="Password" required>
+        <input type="password" placeholder="Senha" required>
       </div>
 
       <div class="options">
-        <label class="remember-me">
-          <input type="checkbox">
-          <span class="toggle-slider"></span>
-          <span>Remember me</span>
+        <label>
+          <input type="checkbox"> Lembrar Senha
         </label>
-        <a href="#" class="forgot-link">Forgot password?</a>
+        <a href="#">Esqueceu sua Senha?</a>
       </div>
 
-      <button type="submit" class="btn-signin">SIGN IN</button>
-    </form>
+      <button type="submit" class="btn-signin">Entrar</button>
 
-    <p class="signup-text">
-      Don't have an account? <a href="#">Sign up</a>
-    </p>
+      <div class="signup-link">
+        Não tem uma Conta? <a href="#">Escrever-se</a>
+      </div>
+    </form>
   </div>
 
 </body>

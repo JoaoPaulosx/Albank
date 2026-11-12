@@ -3,43 +3,72 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Albank</title>
-  <!-- Ícones do Font Awesome -->
-  <link rel="stylesheet" href="https://cloudflare.com">
-  <!-- Link para o arquivo CSS separado -->
+  <title>Albank - Acesso</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <div class="login-container">
-    <h1>Albank</h1>
-    <p class="subtitle">Entre na sua conta</p>
+  <div class="card-wrapper">
+    <div class="card-inner" id="card">
+      
+      <!-- FRENTE: TELA DE LOGIN -->
+      <div class="card-face card-front">
+        <h1>Albank</h1>
+        <p class="subtitle">Entre na sua conta</p>
 
-    <form action="#">
-      <div class="input-group">
-        <i class="fa-solid fa-user"></i>
-        <input type="text" placeholder="Usuário" required>
+        <form action="#">
+          <div class="input-group">
+            <input type="text" placeholder="Usuário" required>
+          </div>
+
+          <div class="input-group">
+            <input type="password" placeholder="Senha" required>
+          </div>
+
+          <div class="options">
+            <label>
+              <input type="checkbox"> Lembrar Senha
+            </label>
+            <a href="#">Esqueceu sua senha?</a>
+          </div>
+
+          <button type="submit" class="btn-action">Entrar</button>
+
+          <div class="switch-link">
+            Não tem uma conta? <a href="#" id="to-register">Inscrever-se</a>
+          </div>
+        </form>
       </div>
 
-      <div class="input-group">
-        <i class="fa-solid fa-lock"></i>
-        <input type="password" placeholder="Senha" required>
+      <!-- VERSO: TELA DE CADASTRO -->
+      <div class="card-face card-back">
+        <h1>Albank</h1>
+        <p class="subtitle">Crie sua conta</p>
+
+        <form action="#">
+          <div class="input-group">
+            <input type="text" placeholder="Nome completo" required>
+          </div>
+
+          <div class="input-group">
+            <input type="email" placeholder="E-mail" required>
+          </div>
+
+          <div class="input-group">
+            <input type="password" placeholder="Criar senha" required>
+          </div>
+
+          <button type="submit" class="btn-action">Cadastrar</button>
+
+          <div class="switch-link">
+            Já tem uma conta? <a href="#" id="to-login">Entrar</a>
+          </div>
+        </form>
       </div>
 
-      <div class="options">
-        <label>
-          <input type="checkbox"> Lembrar Senha
-        </label>
-        <a href="#">Esqueceu sua senha?</a>
-      </div>
-
-      <button type="submit" class="btn-signin">Entrar</button>
-
-      <div class="signup-link">
-       Não tem uma conta? <a href="#">Inscrever-se</a>
-      </div>
-    </form>
+    </div>
   </div>
 
+  <script src="script.js"></script>
 </body>
 </html>
